@@ -237,9 +237,9 @@ final class Err
 
         // Printing the stack trace..
         if (count($aDebugTrace)>0) {
-        
-          echo "Stack trace:" . "<br>";
-
+         
+          echo "Stack trace:" . "<br>"; 
+         
           $i = 1;
           foreach ($aDebugTrace as $trace) {
             echo $i . " " . $trace['function'] . "()" . " " . ((isset($trace['file'])) ? $trace['file'] . ":" : "") . isset1($trace['line'], "") . "<br>";
@@ -398,6 +398,7 @@ final class Err
       if (DEBUG) { 
         
         //Buffering stack trace..
+        $errStack = "";        
         if (count($aDebugTrace)>0) {
         
           $errStack = "Stack trace:" . "<br>";
@@ -464,6 +465,7 @@ final class Err
       if (DEBUG) { 
 
         //Buffering stack trace..
+        $errStack = "";        
         if (count($aDebugTrace)>0) {
         
           $errStack = "Stack trace:" . "<br>";
@@ -546,6 +548,7 @@ final class Err
       if (DEBUG) { 
         
         //Buffering stack trace..
+        $errStack = ""; 
         if (count($aDebugTrace)>0) {
         
           $errStack = "Stack trace:" . "<br>";
@@ -612,6 +615,7 @@ final class Err
       if (DEBUG) { 
 
         //Buffering stack trace..
+        $errStack = ""; 
         if (count($aDebugTrace)>0) {
         
           $errStack = "Stack trace:" . "<br>";
